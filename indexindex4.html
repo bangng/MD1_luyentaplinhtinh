@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button id="play" onclick="playRan()">Play</button>
+</body>
+</html>
+<script>
+    function playRan() {
+        let min = +prompt("Đoán số trong khoảng tù: ")
+        let max = +prompt("Đến: ")
+        let ran = Math.floor(Math.random()*(max+1-min))+min
+        while (1){
+            let guess = +prompt('Đoán nào: ')
+            if (guess>ran){
+                alert('thấp tí nào!')
+            }else  if (guess<ran){
+                alert('Cao lên tý!!!')
+            }else {
+                document.getElementById('play').innerText='Chơi Lại';
+                alert('Chính Xác!!!');
+                document.write('Giỏi quá !! Thưởng cho cái kẹo mút nè !!!')
+                break;
+            }
+        }
+
+    }
+</script>
